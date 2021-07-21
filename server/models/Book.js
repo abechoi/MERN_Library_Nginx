@@ -5,29 +5,33 @@ const BookSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      required: [true, "Please add a title."],
+      required: [true, "Please add a titile"],
       unique: true,
       trim: true,
-      maxlength: [50, "Book title cannot exceed 50 characters."],
+      maxlength: [50, "Book title can't be more than 50 characters"],
     },
     slug: String,
     published: { type: Boolean, default: false },
+    description: {
+      type: String,
+      required: [true, "Please add a subtitile"],
+    },
     subtitle: {
       type: String,
-      required: [true, "Please add a subtitle."],
+      required: [true, "Please add a subtitile"],
       trim: true,
-      maxlength: [50, "Book subtitle cannot exceed 50 characters."],
+      maxlength: [50, "Book subtitle can't be more than 50 characters"],
     },
     author: {
       type: String,
-      required: [true, "Please add author."],
+      required: [true, "Please add an author"],
       trim: true,
     },
     isbn: {
       type: String,
-      required: [true, "Please add isbn."],
+      required: [true, "Please add an isbn number"],
       trim: true,
-      maxlength: [13, "ISBN cannot exceed 13 characters."],
+      maxlength: [13, "ISBN number can't be more than 13 characters"],
     },
   },
   {
