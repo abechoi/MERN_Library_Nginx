@@ -14,11 +14,11 @@ const BookSchema = new mongoose.Schema(
     published: { type: Boolean, default: false },
     description: {
       type: String,
-      required: [true, "Please add a subtitile"],
+      required: [true, "Please add a description"],
     },
     subtitle: {
       type: String,
-      required: [true, "Please add a subtitile"],
+      required: [true, "Please add a subtitle"],
       trim: true,
       maxlength: [50, "Book subtitle can't be more than 50 characters"],
     },
