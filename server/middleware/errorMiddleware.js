@@ -3,7 +3,7 @@ const LibraryError = require("../utils/libraryError");
 const mongooseErrorHandler = (err, req, res, next) => {
   let error = { ...error };
 
-  error.message = error.message;
+  error.message = err.message;
 
   if (err.name === "CastError") {
     const message = `Invalid ${err.path}: ${err.value}. This resource does not exist.`;

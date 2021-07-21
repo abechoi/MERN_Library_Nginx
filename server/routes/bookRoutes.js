@@ -2,6 +2,7 @@ const express = require("express");
 const {
   createBook,
   getBooks,
+  getBook,
   updateBook,
   deleteBook,
   getPublishedBooks,
