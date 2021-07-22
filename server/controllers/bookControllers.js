@@ -6,8 +6,8 @@ const LibraryError = require("../utils/libraryError");
 // $-path    POST /api/v1/books
 // $-auth    Public
 exports.createBook = AsyncManager(async (req, res, next) => {
-  const newbook = await Book.create(req.body);
-  return res.status(201).json(newbook);
+  const book = await Book.create(req.body);
+  return res.status(201).json(book);
 });
 
 // $-title   Get all Books
