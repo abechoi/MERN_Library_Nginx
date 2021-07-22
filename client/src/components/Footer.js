@@ -1,7 +1,5 @@
 import React from "react";
-import { Col } from "react-bootstrap/Col";
-import { Container } from "react-bootstrap/Container";
-import { Row } from "react-bootstrap/Row";
+import { Col, Container, Row } from "react-bootstrap";
 
 const Footer = () => {
   return (
@@ -9,7 +7,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col className="text-center py-3">
-            Copyright $copy; Library {new Date().getFullYear}
+            Copyright &copy; Library {new Date().getFullYear()}
           </Col>
         </Row>
       </Container>

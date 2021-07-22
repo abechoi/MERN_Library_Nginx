@@ -1,7 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap/Button";
-import { Container } from "react-bootstrap/Container";
-import { Jumbotron } from "react-bootstrap/Jumbotron";
+import { Button, Container, Jumbotron } from "react-bootstrap";
 import { BrowserRouter as Router } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -17,7 +15,7 @@ const App = () => {
             <h1 className="text-center">Welcome to My Library!</h1>
             <p className="text-center">
               This is a simple Fullstack MERN Application to demonstrate how
-              Nginx and Docker can be used in this workflow.
+              Nginx and Docker can be used in this workflow
             </p>
             <p className="text-center">
               <LinkContainer to="/books">

@@ -15,9 +15,8 @@ services:
       #This is a must for development in order to update our container whenever a change to the source code is made. Without this, you would have to rebuild the image each time you make a change to source code.
 
       - ./server:/app
-    # declared on nginx
     # ports:
-    #   - 5000:5000
+    #    - 5000:5000
     depends_on:
       - mongodb
     environment:
@@ -36,7 +35,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
     volumes:
       # for persistence storage
-      - mongodb-data:/data/db:rw
+      - mongodb-data:/data/db
     networks:
       - library-mern-api
 
@@ -66,11 +65,10 @@ services:
       dockerfile: Dockerfile.dev
     container_name: library_mern_frontend
     volumes:
-      - /app/node_modules
+      - ./app/node_modules
       - ./client:/app
-    # declared on nginx
     # ports:
-    #   - 3000:3000
+    #    - 3000:3000
     depends_on:
       - library-api
     networks:
