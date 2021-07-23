@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import BookList from "./pages/BookListPage";
 import Homepage from "./pages/Homepage";
+import BookPage from "./pages/BookPage";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Container>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/books" component={BookList} />
+          <Route exact path="/books/:id" component={BookPage} />
         </Container>
       </main>
       <Footer />

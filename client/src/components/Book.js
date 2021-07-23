@@ -6,7 +6,7 @@ const Book = ({ book }) => {
   return (
     <Card className="my-3 p-3 rounded">
       <Card.Body>
-        <Link to={`/book/${book._id}`}>
+        <Link to={`/books/${book._id}`}>
           <Card.Title as="div">
             <strong>{book.title}</strong>
           </Card.Title>
