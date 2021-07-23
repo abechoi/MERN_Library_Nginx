@@ -15,6 +15,7 @@ exports.createBook = AsyncManager(async (req, res, next) => {
 // $-auth    Public
 exports.getBooks = AsyncManager(async (req, res, next) => {
   const books = await Book.find();
+  //throw new LibraryError(`Book not found...`, 404);
   return res.status(200).json(books);
 });
 
