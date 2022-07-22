@@ -1,4 +1,4 @@
-# kubectl apply -f client-claim0-persistentvolumeclaim.yaml,client-claim1-persistentvolumeclaim.yaml,client-deployment.yaml,library-api-claim0-persistentvolumeclaim.yaml,library-api-claim1-persistentvolumeclaim.yaml,library-api-deployment.yaml,library-mern-api-networkpolicy.yaml,mongo-express-deployment.yaml,mongo-express-service.yaml,mongodb-data-persistentvolumeclaim.yaml,mongodb-deployment.yaml,mongodb-service.yaml,nginx-deployment.yaml,nginx-service.yaml
+#kubectl apply -f client-claim0-persistentvolumeclaim.yaml,client-claim1-persistentvolumeclaim.yaml,client-deployment.yaml,library-api-claim0-persistentvolumeclaim.yaml,library-api-claim1-persistentvolumeclaim.yaml,library-api-deployment.yaml,library-mern-api-networkpolicy.yaml,mongo-express-deployment.yaml,mongo-express-service.yaml,mongodb-data-persistentvolumeclaim.yaml,mongodb-deployment.yaml,mongodb-service.yaml,nginx-deployment.yaml,nginx-service.yaml
 
 version: "3"
 
