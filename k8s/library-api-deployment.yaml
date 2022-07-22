@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: library-api
+  name: library-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: library-api
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (HEAD)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/library-mern-api: "true"
+        io.kompose.service: library-api
+    spec:
+      containers:
+        - env:
+            - name: MONGO_URI
+              value: mongodb://:@mongodb
+            - name: NODE_ENV
+          image: library-api
+          name: library-mern-nginx
+          resources: {}
+          volumeMounts:
+            - mountPath: /app/node_modules
+              name: library-api-claim0
+            - mountPath: /app
+              name: library-api-claim1
+      restartPolicy: Always
+      volumes:
+        - name: library-api-claim0
+          persistentVolumeClaim:
+            claimName: library-api-claim0
+        - name: library-api-claim1
+          persistentVolumeClaim:
+            claimName: library-api-claim1
+status: {}

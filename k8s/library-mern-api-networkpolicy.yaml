@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  creationTimestamp: null
+  name: library-mern-api
+spec:
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              io.kompose.network/library-mern-api: "true"
+  podSelector:
+    matchLabels:
+      io.kompose.network/library-mern-api: "true"
